@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class ScoreViewController: UIViewController {
     
@@ -15,11 +16,18 @@ class ScoreViewController: UIViewController {
     
     var correct=0
     var quizNumber=0
+    var bannerView:GADBannerView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        scoreLabel.text = "\(quizNumber)問中 \(correct)問正解！"
+        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        bannerView.adUnitID = "ca-app-pub-4331069619603691/4637611170"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        addBannerViewToView(bannerView)
+        
+        scoreLabel.text = "\(quizNumber)問中 \(correct)問正解！！"
         shareButton.layer.borderWidth = 2
         shareButton.layer.borderColor = UIColor.black.cgColor
         returnTopButton.layer.borderWidth = 2
@@ -37,6 +45,15 @@ class ScoreViewController: UIViewController {
     
     @IBAction func toTopButtonAction(_ sender: Any) {
         self.presentingViewController?.presentingViewController?.presentingViewController?.dismiss(animated: true)
+    }
+    
+    func addBannerViewToView(_ bannerView: GADBannerView){
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        view.addConstraints(
+            [NSLayoutConstraint(item: bannerView, attribute: .bottom, relatedBy: .equal, toItem: view.safeAreaLayoutGuide, attribute: .bottom, multiplier: 1, constant: 0),
+             NSLayoutConstraint(item: bannerView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0)
+            ])
     }
     /*
     // MARK: - Navigation

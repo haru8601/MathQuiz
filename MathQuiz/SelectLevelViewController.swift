@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class SelectLevelViewController: UIViewController {
     
@@ -14,9 +15,17 @@ class SelectLevelViewController: UIViewController {
     @IBOutlet weak var level3Button: UIButton!
     
     var selectTag = 0
+    var bannerView:GADBannerView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        bannerView.adUnitID="ca-app-pub-4331069619603691/4637611170"
+        bannerView.rootViewController=self
+        bannerView.load(GADRequest())
+        addBannerViewToView(bannerView)
+        
         level1Button.layer.borderWidth = 2
         level1Button.layer.borderColor = UIColor.black.cgColor
         level2Button.layer.borderWidth = 2
@@ -38,6 +47,14 @@ class SelectLevelViewController: UIViewController {
         performSegue(withIdentifier: "toQuizVC", sender: nil)
     }
     
+    func addBannerViewToView(_ bannerView: GADBannerView){
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        view.addConstraints(
+            [NSLayoutConstraint(item: bannerView, attribute: .bottom, relatedBy: .equal, toItem: view.safeAreaLayoutGuide, attribute: .bottom, multiplier: 1, constant: 0),
+             NSLayoutConstraint(item: bannerView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0)
+            ])
+    }
 
     /*
     // MARK: - Navigation
