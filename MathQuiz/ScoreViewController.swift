@@ -24,7 +24,7 @@ class ScoreViewController: UIViewController {
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
         bannerView.adUnitID = "ca-app-pub-4331069619603691/4637611170"
         bannerView.rootViewController = self
-        bannerView.load(GADRequest())
+        bannerView.load(GADRequest()) 
         addBannerViewToView(bannerView)
         
         scoreLabel.text = "\(quizNumber)問中 \(correct)問正解！！"

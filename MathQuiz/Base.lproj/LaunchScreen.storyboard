@@ -18,9 +18,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QuizIcon.001.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="GMI-uM-zel">
-                                <rect key="frame" x="123.5" y="-434.5" width="128" height="1536"/>
+                                <rect key="frame" x="123" y="-434.5" width="129" height="1536"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="128" id="fGU-5L-fkv"/>
+                                    <constraint firstAttribute="width" constant="129" id="fGU-5L-fkv"/>
                                 </constraints>
                             </imageView>
                         </subviews>

@@ -18,7 +18,7 @@ class SelectLevelViewController: UIViewController {
     var bannerView:GADBannerView!
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad() 
         
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
         bannerView.adUnitID="ca-app-pub-4331069619603691/4637611170"

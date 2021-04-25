@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        sleep(1) //waiting 2 seconds while Launch Screen
+        sleep(1) //waiting 1 seconds while Launch Screen
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         return true
     }

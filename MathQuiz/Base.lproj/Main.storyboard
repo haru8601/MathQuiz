@@ -68,7 +68,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGw-sa-gNI">
-                                <rect key="frame" x="250" y="50" width="75" height="30"/>
+                                <rect key="frame" x="250" y="50" width="65" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -153,7 +153,7 @@
                             <constraint firstItem="dXP-HS-MYt" firstAttribute="leading" secondItem="3IS-6C-MdC" secondAttribute="leading" constant="20" id="NML-VS-HjG"/>
                             <constraint firstItem="rUx-9Y-f8c" firstAttribute="leading" secondItem="3IS-6C-MdC" secondAttribute="leading" constant="40" id="ODT-d4-irG"/>
                             <constraint firstItem="dXP-HS-MYt" firstAttribute="top" secondItem="XGw-sa-gNI" secondAttribute="bottom" constant="50" id="QQz-FU-kMy"/>
-                            <constraint firstItem="3IS-6C-MdC" firstAttribute="trailing" secondItem="XGw-sa-gNI" secondAttribute="trailing" constant="50" id="bVD-tA-1zF"/>
+                            <constraint firstItem="3IS-6C-MdC" firstAttribute="trailing" secondItem="XGw-sa-gNI" secondAttribute="trailing" constant="60" id="bVD-tA-1zF"/>
                             <constraint firstItem="Pg5-sK-bfg" firstAttribute="top" secondItem="3IS-6C-MdC" secondAttribute="top" constant="75" id="io2-x3-eKB"/>
                             <constraint firstItem="XGw-sa-gNI" firstAttribute="leading" secondItem="3IS-6C-MdC" secondAttribute="leading" constant="250" id="mbZ-Pf-9rl"/>
                             <constraint firstItem="Pg5-sK-bfg" firstAttribute="centerX" secondItem="7TJ-DG-e1u" secondAttribute="centerX" id="qGc-XM-DGa"/>
