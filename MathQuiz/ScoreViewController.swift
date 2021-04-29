@@ -22,7 +22,7 @@ class ScoreViewController: UIViewController {
         super.viewDidLoad()
         
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
-        bannerView.adUnitID = "ca-app-pub-4331069619603691/4637611170"
+        bannerView.adUnitID = "/*Ads Unit ID*/"
         bannerView.rootViewController = self
         bannerView.load(GADRequest()) 
         addBannerViewToView(bannerView)
